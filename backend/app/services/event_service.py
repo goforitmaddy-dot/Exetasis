@@ -22,9 +22,15 @@ class EventService:
     async def ingest_single(self, event_in: WorkplaceEventCreate) -> WorkplaceEventRead:
         """Persist a single workplace event."""
         logger.info("Ingesting event: source=%s, type=%s", event_in.source, event_in.event_type)
+        if event_in.source_identifier:
+            existing = await self.repo.get_by_source_identifier(event_in.source, event_in.source_identifier)
+            if existing:
+                return WorkplaceEventRead.model_validate(existing)
         db_event = WorkplaceEvent(
             source=event_in.source,
             event_type=event_in.event_type,
+            organization_id=event_in.organization_id,
+            source_identifier=event_in.source_identifier,
             employee_id=event_in.employee_id,
             payload=event_in.payload,
             processed=False,
@@ -39,6 +45,8 @@ class EventService:
             db_event = WorkplaceEvent(
                 source=item.source,
                 event_type=item.event_type,
+                organization_id=item.organization_id,
+                source_identifier=item.source_identifier,
                 employee_id=item.employee_id,
                 payload=item.payload,
                 processed=False,

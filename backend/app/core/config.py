@@ -1,5 +1,5 @@
 from typing import List, Literal
-from pydantic import field_validator
+from pydantic import Field, field_validator
 from pydantic_settings import BaseSettings, SettingsConfigDict
 
 
@@ -33,11 +33,29 @@ class Settings(BaseSettings):
     DATABASE_URL: str = "sqlite+aiosqlite:///./exetasis.db"
 
     # LLM Settings (Open-source / local models only)
-    LLM_PROVIDER: Literal["ollama", "vllm", "mock", "gemini"] = "ollama"
+    LLM_PROVIDER: Literal["ollama", "vllm", "mock"] = "ollama"
 
     # Ollama settings
     OLLAMA_BASE_URL: str = "http://localhost:11434"
-    OLLAMA_MODEL: str = "llama3.2:latest"
+    OLLAMA_MODEL: str = "llama3.1:latest"
+
+    # Provisional MVP weights: equal weight is a transparent starting convention, not a validated HR measure.
+    CONTRIBUTION_DIMENSION_WEIGHTS: dict[str, float] = Field(default_factory=lambda: {
+        "task_completion": 1.0,
+        "difficulty": 1.0,
+        "quality": 1.0,
+        "review_acceptance": 1.0,
+        "rework": 1.0,
+        "mentoring_unblocking": 1.0,
+    })
+
+    @field_validator("CONTRIBUTION_DIMENSION_WEIGHTS")
+    @classmethod
+    def validate_contribution_weights(cls, value: dict[str, float]) -> dict[str, float]:
+        expected = {"task_completion", "difficulty", "quality", "review_acceptance", "rework", "mentoring_unblocking"}
+        if set(value) != expected or any(weight <= 0 for weight in value.values()):
+            raise ValueError(f"Contribution weights must provide positive values for exactly: {sorted(expected)}")
+        return value
 
     # vLLM settings (Local or AMD-hosted)
     VLLM_BASE_URL: str = "http://localhost:8000/v1"

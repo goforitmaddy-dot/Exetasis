@@ -16,6 +16,7 @@ class Employee(Base):
     email: str = Column(String(255), unique=True, nullable=False, index=True)
     role: str = Column(String(100), nullable=False)
     department: str = Column(String(100), nullable=False, index=True)
+    organization_id: str | None = Column(String(36), nullable=True, index=True)
     created_at: datetime = Column(
         DateTime(timezone=True),
         default=lambda: datetime.now(timezone.utc),

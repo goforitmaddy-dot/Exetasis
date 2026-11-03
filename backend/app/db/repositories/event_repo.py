@@ -12,6 +12,15 @@ class EventRepository(BaseRepository[WorkplaceEvent]):
     def __init__(self, session: AsyncSession) -> None:
         super().__init__(WorkplaceEvent, session)
 
+    async def get_by_source_identifier(self, source: str, source_identifier: str) -> WorkplaceEvent | None:
+        result = await self.session.execute(
+            select(WorkplaceEvent).filter(
+                WorkplaceEvent.source == source,
+                WorkplaceEvent.source_identifier == source_identifier,
+            )
+        )
+        return result.scalars().first()
+
     async def get_unprocessed(self, limit: int = 50) -> List[WorkplaceEvent]:
         """Fetch unanalyzed workplace events."""
         result = await self.session.execute(

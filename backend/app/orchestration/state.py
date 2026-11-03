@@ -20,6 +20,6 @@ class WorkplaceGraphState(TypedDict, total=False):
     accountability_output: Optional[Dict[str, Any]]
 
     # Synthesis
-    overall_score: float
+    overall_score: Optional[float]
     summary: str
     errors: List[str]

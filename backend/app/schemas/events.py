@@ -7,6 +7,8 @@ class WorkplaceEventBase(BaseModel):
     """Base schema for workplace events."""
 
     source: str = Field(..., description="Source adapter (slack, github, calendar, manual)")
+    organization_id: str | None = None
+    source_identifier: str | None = None
     event_type: str = Field(..., description="Type of event, e.g. commit, pr_review, chat_message")
     employee_id: Optional[str] = Field(None, description="Employee identifier, if associated")
     payload: Dict[str, Any] = Field(default_factory=dict, description="Arbitrary event payload data")

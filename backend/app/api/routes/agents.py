@@ -1,5 +1,7 @@
 from typing import List
-from fastapi import APIRouter, HTTPException, Path
+from fastapi import APIRouter, Depends, HTTPException, Path
+from sqlalchemy.ext.asyncio import AsyncSession
+from sqlalchemy import select
 
 from backend.app.agents.accountability import AccountabilityAgent
 from backend.app.agents.contribution import ContributionAgent
@@ -26,6 +28,11 @@ from backend.app.schemas.agents import (
     WorkplaceConfigurationInput,
 )
 from backend.app.services.llm.factory import get_llm_client
+from backend.app.db.session import get_db
+from backend.app.schemas.orchestration import EventOrchestrationRequest, OrchestrationRunRead
+from backend.app.services.orchestration_service import OrchestrationService
+from backend.app.db.models.metric import AgentEvaluation
+from backend.app.schemas.orchestration import ApprovalDecisionRequest
 
 agents_router = APIRouter(prefix="", tags=["Agents & Orchestration"])
 
@@ -131,3 +138,54 @@ async def run_orchestration(payload: OrchestrationRunRequest) -> OrchestrationRu
         event_ids=payload.event_ids,
         parameters=payload.parameters,
     )
+
+
+@agents_router.post("/orchestration/events", response_model=OrchestrationRunRead)
+async def run_event_orchestration(
+    payload: EventOrchestrationRequest,
+    session: AsyncSession = Depends(get_db),
+) -> OrchestrationRunRead:
+    """Ingest or process one normalized source event through conditional LangGraph routing."""
+    try:
+        return await OrchestrationService(session).run_event(event_id=payload.event_id, event=payload.event)
+    except (ValueError, LookupError) as exc:
+        raise HTTPException(status_code=404 if isinstance(exc, LookupError) else 422, detail=str(exc)) from exc
+
+
+@agents_router.get("/orchestration/runs/{run_id}", response_model=OrchestrationRunRead)
+async def get_orchestration_run(run_id: str, session: AsyncSession = Depends(get_db)) -> OrchestrationRunRead:
+    run = await OrchestrationService(session).get_run(run_id)
+    if not run:
+        raise HTTPException(status_code=404, detail="Orchestration run not found.")
+    return run
+
+
+@agents_router.get("/organizations/{organization_id}/agent-results")
+async def get_organization_agent_results(
+    organization_id: str,
+    limit: int = 50,
+    session: AsyncSession = Depends(get_db),
+) -> list[dict]:
+    runs = await OrchestrationService(session).list_runs(organization_id, limit=min(max(limit, 1), 200))
+    return [item.model_dump(mode="json") for item in runs]
+
+
+@agents_router.get("/approvals/pending")
+async def list_pending_approvals(session: AsyncSession = Depends(get_db)) -> list[dict]:
+    """List persisted findings that explicitly require human review."""
+    result = await session.execute(select(AgentEvaluation).where(AgentEvaluation.agent_id.in_(["reward", "culture", "accountability"])))
+    pending = []
+    for row in result.scalars().all():
+        data = row.metadata_json or {}
+        status = data.get("approval_status")
+        requires_review = data.get("requires_human_review") or data.get("requires_approval")
+        if status == "pending" or requires_review:
+            pending.append({"id": row.id, "agent_id": row.agent_id, "event_id": row.event_id,
+                            "target_id": row.target_id, "status": "pending", "result": data})
+    return pending
+
+
+@agents_router.post("/approvals/{approval_id}")
+async def decide_approval(approval_id: str, payload: ApprovalDecisionRequest) -> dict:
+    """Fail closed until a trusted reviewer identity/permission provider is configured."""
+    raise HTTPException(status_code=403, detail="Approval actions are disabled: this application has no authentication or reviewer permission system configured.")

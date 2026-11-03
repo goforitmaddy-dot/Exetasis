@@ -1,5 +1,5 @@
 from datetime import datetime, timezone
-from typing import Any, Dict, List, Optional
+from typing import Any, Dict, List, Literal, Optional
 from pydantic import BaseModel, Field
 
 
@@ -26,7 +26,7 @@ class BaseAgentOutput(BaseModel):
 
     agent_id: str
     target_id: str
-    score: float = Field(..., ge=0.0, le=1.0, description="Normalized score between 0.0 and 1.0")
+    score: float | None = Field(..., ge=0.0, le=1.0, description="Normalized score, or null when evidence is insufficient/invalid")
     rationale: str = Field(..., description="Explanation or reasoning for the evaluation")
     findings: List[str] = Field(default_factory=list, description="Actionable findings or insights")
     metadata: Dict[str, Any] = Field(default_factory=dict, description="Agent-specific details")
@@ -65,6 +65,16 @@ class ContributionAgentInput(BaseAgentInput):
 
 class ContributionAgentOutput(BaseAgentOutput):
     agent_id: str = "contribution"
+    score: float | None = Field(default=None, ge=0.0, le=1.0)
+    evaluation_status: Literal["evaluated", "insufficient_evidence", "invalid_evidence"] = "insufficient_evidence"
+    dimensions_used: List[Dict[str, Any]] = Field(default_factory=list)
+    dimensions_missing: List[str] = Field(default_factory=list)
+    dimensions_partial: List[Dict[str, Any]] = Field(default_factory=list)
+    evidence_validation_status: str = "missing"
+    validation_errors: List[str] = Field(default_factory=list)
+    evidence_references: List[Dict[str, Any]] = Field(default_factory=list)
+    confidence: float = Field(default=0.0, ge=0.0, le=1.0)
+    confidence_assessment: Dict[str, Any] = Field(default_factory=dict)
     impact_level: str = "standard"  # e.g., low, standard, high, standout
     primary_contributions: List[str] = Field(default_factory=list)
 
@@ -154,5 +164,5 @@ class OrchestrationRunResponse(BaseModel):
     target_id: str
     status: str = "completed"
     agent_results: Dict[str, BaseAgentOutput]
-    overall_score: float
+    overall_score: float | None
     summary: str

@@ -12,6 +12,15 @@ class MetricRepository(BaseRepository[AgentEvaluation]):
     def __init__(self, session: AsyncSession) -> None:
         super().__init__(AgentEvaluation, session)
 
+    async def get_by_event_and_agent(self, event_id: str, agent_id: str) -> AgentEvaluation | None:
+        result = await self.session.execute(
+            select(AgentEvaluation).filter(
+                AgentEvaluation.event_id == event_id,
+                AgentEvaluation.agent_id == agent_id,
+            )
+        )
+        return result.scalars().first()
+
     async def get_by_target(self, target_id: str, limit: int = 50) -> List[AgentEvaluation]:
         """Fetch evaluations for a target employee or department."""
         result = await self.session.execute(

@@ -15,7 +15,11 @@ class AgentEvaluation(Base):
     agent_id: str = Column(String(50), nullable=False, index=True)
     event_id: str | None = Column(String(36), ForeignKey("workplace_events.id", ondelete="SET NULL"), nullable=True)
     target_id: str = Column(String(36), nullable=False, index=True)  # employee_id or team/dept identifier
-    score: float = Column(Float, nullable=False)  # Normalized 0.0 - 1.0
+    # `score_nullable` is the authoritative value. `score` is retained as a non-null compatibility
+    # column for databases created before nullable scores were introduced.
+    score: float | None = Column("score_nullable", Float, nullable=True)
+    score_compat: float | None = Column("score", Float, nullable=True, default=0.0)
+    evaluation_status: str = Column(String(30), nullable=False, default="evaluated", index=True)
     rationale: str = Column(Text, nullable=False)
     metadata_json: dict = Column(JSON, nullable=False, default=dict)
     created_at: datetime = Column(

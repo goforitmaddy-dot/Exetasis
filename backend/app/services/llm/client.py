@@ -28,10 +28,10 @@ class MockLLMClient(LLMClient):
 class OllamaClient(LLMClient):
     """Client for locally served open-source models via Ollama."""
 
-    def __init__(self, base_url: str = settings.OLLAMA_BASE_URL, model: str = settings.OLLAMA_MODEL) -> None:
-        self.base_url = base_url
-        self.model = model
-        self._llm = ChatOllama(base_url=self.base_url, model=self.model)
+    def __init__(self, base_url: str | None = None, model: str | None = None) -> None:
+        self.base_url = base_url or settings.OLLAMA_BASE_URL
+        self.model = model or settings.OLLAMA_MODEL
+        self._llm = ChatOllama(base_url=self.base_url, model=self.model, temperature=0)
 
     async def generate(self, prompt: str, system_prompt: Optional[str] = None) -> str:
         messages = []

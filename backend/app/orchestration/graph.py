@@ -122,15 +122,21 @@ async def node_synthesizer(state: WorkplaceGraphState) -> Dict[str, Any]:
     scores = []
     for k in keys:
         out = state.get(k)
-        if out and isinstance(out, dict) and "score" in out:
-            scores.append(out["score"])
+        if out and isinstance(out, dict) and isinstance(out.get("score"), (int, float)):
+            scores.append(float(out["score"]))
 
-    overall = sum(scores) / len(scores) if scores else 0.85
-    summary = (
-        f"Multi-agent workplace evaluation completed for target '{state.get('target_id')}'. "
-        f"Overall health index is {overall:.2f} across {len(scores)} evaluated dimensions."
-    )
-    return {"overall_score": round(overall, 2), "summary": summary}
+    overall = round(sum(scores) / len(scores), 2) if scores else None
+    if overall is None:
+        summary = (
+            f"Multi-agent workplace evaluation completed for target '{state.get('target_id')}'. "
+            "Overall health index unavailable because no valid agent scores were returned."
+        )
+    else:
+        summary = (
+            f"Multi-agent workplace evaluation completed for target '{state.get('target_id')}'. "
+            f"Overall health index is {overall:.2f} across {len(scores)} evaluated dimensions."
+        )
+    return {"overall_score": overall, "summary": summary}
 
 
 def build_workplace_graph():
@@ -201,6 +207,6 @@ async def execute_workplace_pipeline(
         target_id=target_id,
         status="completed",
         agent_results=agent_results,
-        overall_score=final_state.get("overall_score", 0.85),
-        summary=final_state.get("summary", "Analysis completed."),
+        overall_score=final_state.get("overall_score"),
+        summary=final_state.get("summary", "Analysis completed; overall score unavailable."),
     )
