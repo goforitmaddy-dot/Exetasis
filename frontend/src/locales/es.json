@@ -1,0 +1,108 @@
+{
+  "nav": {
+    "explore": "Explorar",
+    "capabilities": "Capacidades",
+    "industries": "Industrias",
+    "signIn": "Iniciar Sesión",
+    "getStarted": "Comenzar"
+  },
+  "hero": {
+    "badge": "Plataforma Gemelo Digital IA Empresarial",
+    "headline": "Lugares de trabajo que se comprenden a sí mismos.",
+    "subheadline": "Una plataforma inteligente de orquestación que transforma eventos organizacionales en conocimientos valiosos mediante agentes de IA adaptables y un gemelo digital 3D vivo.",
+    "getStarted": "Comenzar",
+    "explore": "Explorar Exetasis",
+    "activeTelemetry": "Telemetría Multiagente Activa",
+    "livePlatform": "Gemelo Digital 3D Activo"
+  },
+  "capabilities": {
+    "badge": "Arquitectura Central",
+    "title": "Inteligencia de Trabajo Multiagente Autónoma",
+    "subtitle": "Cinco pilares interconectados que brindan transparencia, seguridad psicológica y claridad organizacional.",
+    "cap1_title": "Inteligencia Adaptativa de Trabajo",
+    "cap1_desc": "Agentes autónomos de LangGraph modelan dinámicas en planos físicos y flujos de comunicación remota.",
+    "cap2_title": "Análisis de Contribución y Equidad",
+    "cap2_desc": "Evaluación continua de impacto real, apoyo mutuo y distribución equitativa de tareas sin métricas vanas.",
+    "cap3_title": "Cultura y Ambiente Laboral",
+    "cap3_desc": "Telemetría en tiempo real que mide camaradería de equipo, seguridad psicológica y confort acústico.",
+    "cap4_title": "Responsabilidad y Reconocimientos con IA",
+    "cap4_desc": "Seguimiento sin culpas de compromisos, cumplimiento de acuerdos y recompensas equitativas en tokens.",
+    "cap5_title": "Gemelo Digital 3D en Tiempo Real",
+    "cap5_desc": "Gemelo espacial WebGL que visualiza puestos, zonas de colaboración y pulsos de actividad en tiempo real."
+  },
+  "industries": {
+    "badge": "Adaptabilidad Universal",
+    "title": "Diseñado para Cualquier Entorno Laboral",
+    "subtitle": "Desde sedes corporativas hasta operaciones de campo, Exetasis adapta sus modelos a su realidad operativa.",
+    "corporate": "Oficinas Corporativas",
+    "corporate_desc": "Topologías de escritorios, colaboración interdisciplinaria y flujo asincrónico.",
+    "education": "Instituciones Educativas",
+    "education_desc": "Laboratorios de campus, centros de investigación y aulas colaborativas.",
+    "agriculture": "Agricultura y Agrotecnología",
+    "agriculture_desc": "Equipos de campo distribuidos, sensores remotos y cambios estacionales.",
+    "manufacturing": "Manufactura y Ensamble",
+    "manufacturing_desc": "Ergonomía en líneas de montaje, transferencias de turnos y seguridad física.",
+    "healthcare": "Sistemas de Salud",
+    "healthcare_desc": "Módulos de atención clínica, equidad en turnos y mitigación de fatiga.",
+    "construction": "Construcción e Infraestructura",
+    "construction_desc": "Zonas de obra, cumplimiento de normativas de seguridad y contratistas."
+  },
+  "auth": {
+    "register": {
+      "title": "Cree su cuenta en Exetasis.",
+      "subtitle": "Comience a construir un entorno de trabajo inteligente.",
+      "accountType": "Seleccione el tipo de cuenta",
+      "employer": "Empleador / Administrador",
+      "employee": "Empleado / Miembro del equipo",
+      "fullName": "Nombre completo",
+      "fullNamePlaceholder": "Carlos Mendoza",
+      "workEmail": "Correo laboral",
+      "workEmailPlaceholder": "carlos@empresa.com",
+      "orgName": "Nombre de la organización",
+      "orgNamePlaceholder": "Acme Innovaciones S.A.",
+      "inviteCode": "Código de invitación",
+      "inviteCodePlaceholder": "EX-8849-CORP",
+      "password": "Contraseña",
+      "passwordPlaceholder": "Mínimo 8 caracteres",
+      "confirmPassword": "Confirmar contraseña",
+      "confirmPasswordPlaceholder": "Vuelva a introducir su contraseña",
+      "submitBtn": "Crear Cuenta",
+      "creating": "Creando cuenta...",
+      "orContinue": "o continuar con",
+      "googleBtn": "Continuar con Google",
+      "haveAccount": "¿Ya tiene una cuenta?",
+      "signInLink": "Iniciar Sesión"
+    },
+    "login": {
+      "title": "Bienvenido de nuevo a Exetasis.",
+      "subtitle": "Inicie sesión para acceder a su gemelo de inteligencia organizacional.",
+      "workEmail": "Correo laboral",
+      "workEmailPlaceholder": "usted@empresa.com",
+      "password": "Contraseña",
+      "passwordPlaceholder": "Ingrese su contraseña",
+      "rememberMe": "Recordar este dispositivo",
+      "forgotPassword": "¿Olvidó su contraseña?",
+      "submitBtn": "Iniciar Sesión",
+      "signingIn": "Autenticando...",
+      "orContinue": "o continuar con",
+      "googleBtn": "Continuar con Google",
+      "noAccount": "¿No tiene una cuenta?",
+      "createAccountLink": "Crear una cuenta"
+    },
+    "validation": {
+      "required": "Este campo es obligatorio.",
+      "invalidEmail": "Por favor ingrese un correo laboral válido.",
+      "passwordLength": "La contraseña debe tener al menos 8 caracteres.",
+      "passwordMismatch": "Las contraseñas no coinciden.",
+      "orgRequired": "El nombre de la organización es obligatorio para administradores.",
+      "inviteRequired": "Se requiere un código de invitación válido."
+    }
+  },
+  "footer": {
+    "tagline": "Gemelo Digital Vivo e Inteligencia de Trabajo Multiagente.",
+    "privacy": "Privacidad",
+    "terms": "Términos de Servicio",
+    "security": "Seguridad Empresarial",
+    "systemStatus": "Todos los sistemas operativos"
+  }
+}

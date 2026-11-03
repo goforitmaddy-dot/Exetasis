@@ -1,0 +1,108 @@
+{
+  "nav": {
+    "explore": "Explore",
+    "capabilities": "Capabilities",
+    "industries": "Industries",
+    "signIn": "Sign In",
+    "getStarted": "Get Started"
+  },
+  "hero": {
+    "badge": "Enterprise AI Digital Twin Platform",
+    "headline": "Workplaces that understand themselves.",
+    "subheadline": "An intelligent workplace orchestration platform that transforms organizational events into meaningful insights through adaptive AI agents and a living digital twin.",
+    "getStarted": "Get Started",
+    "explore": "Explore Exetasis",
+    "activeTelemetry": "Active Multi-Agent Telemetry",
+    "livePlatform": "Living 3D Digital Twin Active"
+  },
+  "capabilities": {
+    "badge": "Core Architecture",
+    "title": "Autonomous Multi-Agent Workplace Intelligence",
+    "subtitle": "Five interconnected pillars delivering transparency, psychological safety, and organizational clarity.",
+    "cap1_title": "Adaptive Workplace Intelligence",
+    "cap1_desc": "Autonomous LangGraph agents model workplace dynamics across physical floorplans and remote communication streams.",
+    "cap2_title": "Contribution & Fairness Analysis",
+    "cap2_desc": "Continuous evaluation of meaningful impact, peer support, and equitable task distribution without vanity metrics.",
+    "cap3_title": "Workplace Culture & Environment",
+    "cap3_desc": "Real-time telemetry measuring team camaraderie, psychological safety, and ambient acoustic comfort.",
+    "cap4_title": "AI-Powered Accountability & Rewards",
+    "cap4_desc": "Blameless SLA tracking, commitment fulfillment, and automated equitable kudos token rewards.",
+    "cap5_title": "Real-Time 3D Digital Twin",
+    "cap5_desc": "Spatial WebGL digital twin rendering employee nodes, collaboration zones, and telemetry pulses in real time."
+  },
+  "industries": {
+    "badge": "Universal Adaptability",
+    "title": "Engineered for Every Work Environment",
+    "subtitle": "From corporate office towers to field operations, Exetasis adapts its sensory models to your operational reality.",
+    "corporate": "Corporate Offices",
+    "corporate_desc": "Desk topologies, cross-functional collaboration, and asynchronous flow.",
+    "education": "Educational Institutions",
+    "education_desc": "Campus labs, faculty research hubs, and collaborative lecture spaces.",
+    "agriculture": "Agriculture & Agritech",
+    "agriculture_desc": "Distributed field teams, sensor telemetry, and seasonal operational shifts.",
+    "manufacturing": "Manufacturing & Assembly",
+    "manufacturing_desc": "Assembly line ergonomics, shift handovers, and physical safety metrics.",
+    "healthcare": "Healthcare Systems",
+    "healthcare_desc": "Clinical care pods, on-call distribution fairness, and fatigue mitigation.",
+    "construction": "Construction & Infrastructure",
+    "construction_desc": "Job site zones, safety compliance checkpoints, and contractor coordination."
+  },
+  "auth": {
+    "register": {
+      "title": "Create your Exetasis account.",
+      "subtitle": "Start building an intelligent workplace environment.",
+      "accountType": "Select Account Type",
+      "employer": "Employer / Organization Admin",
+      "employee": "Employee / Team Member",
+      "fullName": "Full Name",
+      "fullNamePlaceholder": "Sarah Jenkins",
+      "workEmail": "Work Email",
+      "workEmailPlaceholder": "sarah@company.com",
+      "orgName": "Organization Name",
+      "orgNamePlaceholder": "Acme Innovations Inc.",
+      "inviteCode": "Organization Invitation Code",
+      "inviteCodePlaceholder": "EX-8849-CORP",
+      "password": "Password",
+      "passwordPlaceholder": "At least 8 characters",
+      "confirmPassword": "Confirm Password",
+      "confirmPasswordPlaceholder": "Re-enter your password",
+      "submitBtn": "Create Account",
+      "creating": "Creating Account...",
+      "orContinue": "or continue with",
+      "googleBtn": "Continue with Google",
+      "haveAccount": "Already have an account?",
+      "signInLink": "Sign In"
+    },
+    "login": {
+      "title": "Welcome back to Exetasis.",
+      "subtitle": "Sign in to access your workplace intelligence twin.",
+      "workEmail": "Work Email",
+      "workEmailPlaceholder": "you@company.com",
+      "password": "Password",
+      "passwordPlaceholder": "Enter your password",
+      "rememberMe": "Remember this device",
+      "forgotPassword": "Forgot password?",
+      "submitBtn": "Sign In",
+      "signingIn": "Authenticating...",
+      "orContinue": "or continue with",
+      "googleBtn": "Continue with Google",
+      "noAccount": "Don't have an account?",
+      "createAccountLink": "Create an account"
+    },
+    "validation": {
+      "required": "This field is required.",
+      "invalidEmail": "Please enter a valid work email address.",
+      "passwordLength": "Password must be at least 8 characters long.",
+      "passwordMismatch": "Passwords do not match.",
+      "orgRequired": "Organization name is required for administrative accounts.",
+      "inviteRequired": "A valid organization invitation code is required."
+    }
+  },
+  "footer": {
+    "tagline": "Living Digital Twin & Multi-Agent Workplace Intelligence.",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service",
+    "security": "Enterprise Security",
+    "systemStatus": "All Systems Operational"
+  }
+}

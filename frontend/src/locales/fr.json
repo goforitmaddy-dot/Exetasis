@@ -1,0 +1,108 @@
+{
+  "nav": {
+    "explore": "Explorer",
+    "capabilities": "Capacités",
+    "industries": "Secteurs",
+    "signIn": "Se connecter",
+    "getStarted": "Commencer"
+  },
+  "hero": {
+    "badge": "Plateforme Jumeau Numérique IA d'Entreprise",
+    "headline": "Des espaces de travail qui se comprennent.",
+    "subheadline": "Une plateforme intelligente d'orchestration qui transforme les événements organisationnels en connaissances exploitables grâce à des agents IA adaptatifs et un jumeau numérique 3D vivant.",
+    "getStarted": "Commencer",
+    "explore": "Découvrir Exetasis",
+    "activeTelemetry": "Télémétrie Multi-Agents Active",
+    "livePlatform": "Jumeau Numérique 3D Actif"
+  },
+  "capabilities": {
+    "badge": "Architecture Fondamentale",
+    "title": "Intelligence d'Espace de Travail Multi-Agents Autonome",
+    "subtitle": "Cinq piliers interconnectés offrant transparence, sécurité psychologique et clarté organisationnelle.",
+    "cap1_title": "Intelligence d'Espace de Travail Adaptative",
+    "cap1_desc": "Des agents LangGraph autonomes modélisent les dynamiques physiques et les flux de communication à distance.",
+    "cap2_title": "Analyse de Contribution et d'Équité",
+    "cap2_desc": "Évaluation continue de l'impact réel, du soutien par les pairs et de la distribution équitable des tâches sans métriques superficielles.",
+    "cap3_title": "Culture et Environnement de Travail",
+    "cap3_desc": "Télémétrie en temps réel mesurant la cohésion d'équipe, la sécurité psychologique et le confort acoustique ambiant.",
+    "cap4_title": "Responsabilité et Récompenses Assistées par IA",
+    "cap4_desc": "Suivi des engagements sans blâme, respect des accords de niveau de service et jetons de reconnaissance équitables.",
+    "cap5_title": "Jumeau Numérique 3D en Temps Réel",
+    "cap5_desc": "Jumeau spatial WebGL modélisant les postes de travail, zones de collaboration et impulsions d'activité en temps réel."
+  },
+  "industries": {
+    "badge": "Adaptabilité Universelle",
+    "title": "Conçu pour Chaque Environnement de Travail",
+    "subtitle": "Des tours de bureaux d'entreprises aux opérations de terrain, Exetasis adapte ses modèles à votre réalité opérationnelle.",
+    "corporate": "Bureaux d'Entreprise",
+    "corporate_desc": "Topologies des postes, collaboration transverse et flux asynchrone.",
+    "education": "Établissements d'Enseignement",
+    "education_desc": "Laboratoires de campus, pôles de recherche et amphithéâtres collaboratifs.",
+    "agriculture": "Agriculture et Agritech",
+    "agriculture_desc": "Équipes de terrain réparties, capteurs connectés et variations saisonnières.",
+    "manufacturing": "Industrie et Fabrication",
+    "manufacturing_desc": "Ergonomie des chaînes d'assemblage, passage de relais et sécurité physique.",
+    "healthcare": "Systèmes de Santé",
+    "healthcare_desc": "Pôles de soins cliniques, équité des gardes et prévention de la fatigue.",
+    "construction": "BTP et Infrastructures",
+    "construction_desc": "Zones de chantier, conformité de sécurité et coordination des sous-traitants."
+  },
+  "auth": {
+    "register": {
+      "title": "Créez votre compte Exetasis.",
+      "subtitle": "Commencez à concevoir un environnement de travail intelligent.",
+      "accountType": "Sélectionnez le type de compte",
+      "employer": "Employeur / Administrateur",
+      "employee": "Employé / Membre d'équipe",
+      "fullName": "Nom complet",
+      "fullNamePlaceholder": "Claire Dupont",
+      "workEmail": "Email professionnel",
+      "workEmailPlaceholder": "claire@entreprise.com",
+      "orgName": "Nom de l'organisation",
+      "orgNamePlaceholder": "Acme Innovations SAS",
+      "inviteCode": "Code d'invitation de l'organisation",
+      "inviteCodePlaceholder": "EX-8849-CORP",
+      "password": "Mot de passe",
+      "passwordPlaceholder": "Au moins 8 caractères",
+      "confirmPassword": "Confirmez le mot de passe",
+      "confirmPasswordPlaceholder": "Ressaisissez votre mot de passe",
+      "submitBtn": "Créer un compte",
+      "creating": "Création du compte en cours...",
+      "orContinue": "ou continuer avec",
+      "googleBtn": "Continuer avec Google",
+      "haveAccount": "Vous avez déjà un compte ?",
+      "signInLink": "Se connecter"
+    },
+    "login": {
+      "title": "Ravi de vous revoir sur Exetasis.",
+      "subtitle": "Connectez-vous pour accéder à votre jumeau d'intelligence organisationnelle.",
+      "workEmail": "Email professionnel",
+      "workEmailPlaceholder": "vous@entreprise.com",
+      "password": "Mot de passe",
+      "passwordPlaceholder": "Entrez votre mot de passe",
+      "rememberMe": "Mémoriser cet appareil",
+      "forgotPassword": "Mot de passe oublié ?",
+      "submitBtn": "Se connecter",
+      "signingIn": "Authentification...",
+      "orContinue": "ou continuer avec",
+      "googleBtn": "Continuer avec Google",
+      "noAccount": "Pas encore de compte ?",
+      "createAccountLink": "Créer un compte"
+    },
+    "validation": {
+      "required": "Ce champ est obligatoire.",
+      "invalidEmail": "Veuillez saisir une adresse email professionnelle valide.",
+      "passwordLength": "Le mot de passe doit comporter au moins 8 caractères.",
+      "passwordMismatch": "Les mots de passe ne correspondent pas.",
+      "orgRequired": "Le nom de l'organisation est requis pour les comptes administrateurs.",
+      "inviteRequired": "Un code d'invitation valide est requis."
+    }
+  },
+  "footer": {
+    "tagline": "Jumeau Numérique Vivant & Intelligence d'Espace Multi-Agents.",
+    "privacy": "Confidentialité",
+    "terms": "Conditions d'utilisation",
+    "security": "Sécurité Entreprise",
+    "systemStatus": "Tous les systèmes sont opérationnels"
+  }
+}

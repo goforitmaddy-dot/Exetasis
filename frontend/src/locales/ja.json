@@ -1,0 +1,108 @@
+{
+  "nav": {
+    "explore": "探索",
+    "capabilities": "機能",
+    "industries": "対応分野",
+    "signIn": "サインイン",
+    "getStarted": "始める"
+  },
+  "hero": {
+    "badge": "エンタープライズAIデジタルツインプラットフォーム",
+    "headline": "自らを理解するワークプレイス。",
+    "subheadline": "適応型AIエージェントとリアルタイム3Dデジタルツインにより、組織内の出来事を有意義な知見へと昇華させるワークプレイス・オーケストレーション基盤。",
+    "getStarted": "無料で始める",
+    "explore": "詳細を見る",
+    "activeTelemetry": "マルチエージェント・テレメトリ稼働中",
+    "livePlatform": "生きた3Dデジタルツイン同期中"
+  },
+  "capabilities": {
+    "badge": "コアアーキテクチャ",
+    "title": "自律型マルチエージェント・ワークプレイス知能",
+    "subtitle": "透明性、心理的安全性、組織の明確性をもたらす5つの統合コア機能。",
+    "cap1_title": "適応型ワークプレイス知能",
+    "cap1_desc": "自律型LangGraphエージェントが、物理的なオフィス配置とリモート通信の流れを統合モデル化します。",
+    "cap2_title": "貢献度と公平性の分析",
+    "cap2_desc": "見せかけの指標を排し、真の成果、相互支援、業務配分の公平性を継続的に評価します。",
+    "cap3_title": "組織文化と作業環境",
+    "cap3_desc": "チームの結束、心理的安全性、執務環境の音響や快適性を測定するリアルタイム測定技術。",
+    "cap4_title": "AI駆動の責務管理と表彰",
+    "cap4_desc": "非難のないコミットメント追跡、SLA遵守、公平な評価トークン発行。",
+    "cap5_title": "リアルタイム3Dデジタルツイン",
+    "cap5_desc": "デスク、協調スペース、活動状況を実時間で描画する空間WebGLデジタルツイン。"
+  },
+  "industries": {
+    "badge": "あらゆる環境への適応",
+    "title": "多様な作業環境に合わせた最適化",
+    "subtitle": "オフィスから現場まで、Exetasisは運用現実に合わせて感覚モデルを柔軟に適合させます。",
+    "corporate": "企業オフィス",
+    "corporate_desc": "座席配置、部門横断コラボレーション、非同期ワークフローの最適化。",
+    "education": "教育・研究機関",
+    "education_desc": "研究室、共同ラボ、オープンな講義空間の利用分析。",
+    "agriculture": "農業・アグリテック",
+    "agriculture_desc": "分散フィールドチーム、IoTセンサー連携、季節運用シフトの管理。",
+    "manufacturing": "製造・組立ライン",
+    "manufacturing_desc": "ライン作業の人間工学、シフト引き継ぎ、安全基準のモニタリング。",
+    "healthcare": "医療・ヘルスケア",
+    "healthcare_desc": "診療ケアポッド、当直配分の公平性、疲労軽減の支援。",
+    "construction": "建設・インフラ工事",
+    "construction_desc": "現場区画の管理、安全コンプライアンス、協力会社の連携強化。"
+  },
+  "auth": {
+    "register": {
+      "title": "Exetasisアカウントの作成",
+      "subtitle": "知的なワークプレイス環境の構築を始めましょう。",
+      "accountType": "アカウント種別の選択",
+      "employer": "管理者 / 企業責任者",
+      "employee": "従業員 / チームメンバー",
+      "fullName": "氏名",
+      "fullNamePlaceholder": "佐藤 健一",
+      "workEmail": "勤務先メールアドレス",
+      "workEmailPlaceholder": "sato@company.co.jp",
+      "orgName": "組織・企業名",
+      "orgNamePlaceholder": "アクメ・イノベーションズ株式会社",
+      "inviteCode": "組織招待コード",
+      "inviteCodePlaceholder": "EX-8849-CORP",
+      "password": "パスワード",
+      "passwordPlaceholder": "8文字以上",
+      "confirmPassword": "パスワードの確認",
+      "confirmPasswordPlaceholder": "再度入力してください",
+      "submitBtn": "アカウントを作成",
+      "creating": "アカウントを作成中...",
+      "orContinue": "または以下で継続",
+      "googleBtn": "Googleで続行",
+      "haveAccount": "すでにアカウントをお持ちですか？",
+      "signInLink": "サインイン"
+    },
+    "login": {
+      "title": "Exetasisへお帰りなさい。",
+      "subtitle": "組織インテリジェンス・ツインにアクセスするためサインインしてください。",
+      "workEmail": "勤務先メールアドレス",
+      "workEmailPlaceholder": "you@company.co.jp",
+      "password": "パスワード",
+      "passwordPlaceholder": "パスワードを入力",
+      "rememberMe": "この端末を記憶する",
+      "forgotPassword": "パスワードをお忘れですか？",
+      "submitBtn": "サインイン",
+      "signingIn": "認証中...",
+      "orContinue": "または以下で継続",
+      "googleBtn": "Googleで続行",
+      "noAccount": "アカウントをお持ちでないですか？",
+      "createAccountLink": "アカウントを作成"
+    },
+    "validation": {
+      "required": "この項目は必須です。",
+      "invalidEmail": "有効な勤務先メールアドレスを入力してください。",
+      "passwordLength": "パスワードは8文字以上である必要があります。",
+      "passwordMismatch": "パスワードが一致しません。",
+      "orgRequired": "管理者アカウントには組織名が必要です。",
+      "inviteRequired": "有効な組織招待コードが必要です。"
+    }
+  },
+  "footer": {
+    "tagline": "生きたデジタルツイン＆自律型マルチエージェント組織知能。",
+    "privacy": "プライバシーポリシー",
+    "terms": "利用規約",
+    "security": "エンタープライズ・セキュリティ",
+    "systemStatus": "全システム正常稼働中"
+  }
+}

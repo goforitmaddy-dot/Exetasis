@@ -1,0 +1,108 @@
+{
+  "nav": {
+    "explore": "Erkunden",
+    "capabilities": "Funktionen",
+    "industries": "Branchen",
+    "signIn": "Anmelden",
+    "getStarted": "Loslegen"
+  },
+  "hero": {
+    "badge": "Enterprise KI Digital Twin Plattform",
+    "headline": "Arbeitsplätze, die sich selbst verstehen.",
+    "subheadline": "Eine intelligente Plattform zur Arbeitsplatz-Orchestrierung, die organisatorische Ereignisse durch adaptive KI-Agenten und einen lebendigen 3D Digital Twin in wertvolle Erkenntnisse transformiert.",
+    "getStarted": "Jetzt Starten",
+    "explore": "Exetasis Entdecken",
+    "activeTelemetry": "Aktive Multi-Agenten Telemetrie",
+    "livePlatform": "Lebendiger 3D Digital Twin Aktiv"
+  },
+  "capabilities": {
+    "badge": "Kernarchitektur",
+    "title": "Autonome Multi-Agenten Arbeitsplatz-Intelligenz",
+    "subtitle": "Fünf miteinander verknüpfte Säulen für Transparenz, psychologische Sicherheit und organisatorische Klarheit.",
+    "cap1_title": "Adaptive Arbeitsplatz-Intelligenz",
+    "cap1_desc": "Autonome LangGraph-Agenten modellieren Dynamiken in physischen Grundrissen und digitalen Kommunikationskanälen.",
+    "cap2_title": "Beitrags- & Fairness-Analyse",
+    "cap2_desc": "Kontinuierliche Bewertung von wirklichem Einfluss, Teamunterstützung und gerechter Aufgabenverteilung ohne Scheinmetriken.",
+    "cap3_title": "Arbeitsplatzkultur & Umfeld",
+    "cap3_desc": "Echtzeit-Telemetrie zur Erfassung von Team-Zusammenhalt, psychologischer Sicherheit und akustischem Komfort.",
+    "cap4_title": "KI-gestützte Verlässlichkeit & Anerkennung",
+    "cap4_desc": "Schuldfreies SLA-Tracking, Verbindlichkeit und automatische Vergabe von fairen Anerkennungs-Tokens.",
+    "cap5_title": "Echtzeit 3D Digital Twin",
+    "cap5_desc": "Räumlicher WebGL Digital Twin zur Visualisierung von Arbeitsplätzen, Kollaborationszonen und Aktivitätsimpulsen."
+  },
+  "industries": {
+    "badge": "Universelle Anpassungsfähigkeit",
+    "title": "Entwickelt für jede Arbeitsumgebung",
+    "subtitle": "Von Firmenzentralen bis hin zu Außenarbeiten passt Exetasis sensorische Modelle an Ihre betriebliche Realität an.",
+    "corporate": "Unternehmensbüros",
+    "corporate_desc": "Schreibtisch-Topologien, interdisziplinäre Zusammenarbeit und asynchroner Arbeitsfluss.",
+    "education": "Bildungseinrichtungen",
+    "education_desc": "Campus-Labore, Forschungszentren und kollaborative Hörsäle.",
+    "agriculture": "Landwirtschaft & Agrartechnik",
+    "agriculture_desc": "Verteilte Außenteams, Sensortelemetrie und saisonale Betriebsverschiebungen.",
+    "manufacturing": "Fertigung & Montage",
+    "manufacturing_desc": "Ergonomie der Montagelinien, Schichtübergaben und physische Sicherheit.",
+    "healthcare": "Gesundheitswesen",
+    "healthcare_desc": "Klinische Stationen, faire Dienstpläne und Erschöpfungsprävention.",
+    "construction": "Bauwesen & Infrastruktur",
+    "construction_desc": "Baustellenbereiche, Sicherheitskonformität und Koordination von Partnern."
+  },
+  "auth": {
+    "register": {
+      "title": "Erstellen Sie Ihr Exetasis-Konto.",
+      "subtitle": "Beginnen Sie mit dem Aufbau einer intelligenten Arbeitsumgebung.",
+      "accountType": "Kontotyp auswählen",
+      "employer": "Arbeitgeber / Administrator",
+      "employee": "Mitarbeiter / Teammitglied",
+      "fullName": "Vollständiger Name",
+      "fullNamePlaceholder": "Maximilian Weber",
+      "workEmail": "Geschäftliche E-Mail",
+      "workEmailPlaceholder": "maximilian@unternehmen.de",
+      "orgName": "Name der Organisation",
+      "orgNamePlaceholder": "Acme Innovationen GmbH",
+      "inviteCode": "Organisations-Einladungscode",
+      "inviteCodePlaceholder": "EX-8849-CORP",
+      "password": "Passwort",
+      "passwordPlaceholder": "Mindestens 8 Zeichen",
+      "confirmPassword": "Passwort bestätigen",
+      "confirmPasswordPlaceholder": "Geben Sie Ihr Passwort erneut ein",
+      "submitBtn": "Konto erstellen",
+      "creating": "Konto wird erstellt...",
+      "orContinue": "oder weiter mit",
+      "googleBtn": "Mit Google fortfahren",
+      "haveAccount": "Bereits registriert?",
+      "signInLink": "Anmelden"
+    },
+    "login": {
+      "title": "Willkommen zurück bei Exetasis.",
+      "subtitle": "Melden Sie sich an, um auf Ihren Digital Twin zuzugreifen.",
+      "workEmail": "Geschäftliche E-Mail",
+      "workEmailPlaceholder": "ihre.email@unternehmen.de",
+      "password": "Passwort",
+      "passwordPlaceholder": "Geben Sie Ihr Passwort ein",
+      "rememberMe": "Dieses Gerät merken",
+      "forgotPassword": "Passwort vergessen?",
+      "submitBtn": "Anmelden",
+      "signingIn": "Authentifizierung...",
+      "orContinue": "oder weiter mit",
+      "googleBtn": "Mit Google fortfahren",
+      "noAccount": "Noch kein Konto?",
+      "createAccountLink": "Konto erstellen"
+    },
+    "validation": {
+      "required": "Dieses Feld ist erforderlich.",
+      "invalidEmail": "Bitte geben Sie eine gültige geschäftliche E-Mail-Adresse ein.",
+      "passwordLength": "Das Passwort muss mindestens 8 Zeichen lang sein.",
+      "passwordMismatch": "Passwörter stimmen nicht überein.",
+      "orgRequired": "Der Name der Organisation ist für Administratoren erforderlich.",
+      "inviteRequired": "Ein gültiger Einladungscode ist erforderlich."
+    }
+  },
+  "footer": {
+    "tagline": "Lebendiger Digital Twin & Multi-Agenten Arbeitsplatz-Intelligenz.",
+    "privacy": "Datenschutz",
+    "terms": "Nutzungsbedingungen",
+    "security": "Unternehmenssicherheit",
+    "systemStatus": "Alle Systeme betriebsbereit"
+  }
+}
